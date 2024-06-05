@@ -2,8 +2,8 @@
 import torch
 from torch.nn import functional as F
 
-from detectron2.layers import cat
-from detectron2.structures import Boxes
+from detectron1.layers import cat
+from detectron1.structures import Boxes
 
 
 """

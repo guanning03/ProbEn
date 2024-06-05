@@ -4,10 +4,10 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from detectron2.layers import ShapeSpec, cat
-from detectron2.structures import BitMasks
-from detectron2.utils.events import get_event_storage
-from detectron2.utils.registry import Registry
+from detectron1.layers import ShapeSpec, cat
+from detectron1.structures import BitMasks
+from detectron1.utils.events import get_event_storage
+from detectron1.utils.registry import Registry
 
 from .point_features import point_sample
 

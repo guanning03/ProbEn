@@ -8,17 +8,17 @@ import torch.nn.functional as F
 from fvcore.nn import sigmoid_focal_loss_star_jit, smooth_l1_loss
 from torch import nn
 
-from detectron2.layers import ShapeSpec, batched_nms, cat, paste_masks_in_image
-from detectron2.modeling.anchor_generator import DefaultAnchorGenerator
-from detectron2.modeling.backbone import build_backbone
-from detectron2.modeling.box_regression import Box2BoxTransform
-from detectron2.modeling.meta_arch.build import META_ARCH_REGISTRY
-from detectron2.modeling.meta_arch.retinanet import (
+from detectron1.layers import ShapeSpec, batched_nms, cat, paste_masks_in_image
+from detectron1.modeling.anchor_generator import DefaultAnchorGenerator
+from detectron1.modeling.backbone import build_backbone
+from detectron1.modeling.box_regression import Box2BoxTransform
+from detectron1.modeling.meta_arch.build import META_ARCH_REGISTRY
+from detectron1.modeling.meta_arch.retinanet import (
     permute_all_cls_and_box_to_N_HWA_K_and_concat,
     permute_to_N_HWA_K,
 )
-from detectron2.structures import Boxes, ImageList, Instances
-from detectron2.utils.logger import log_first_n
+from detectron1.structures import Boxes, ImageList, Instances
+from detectron1.utils.logger import log_first_n
 
 from tensormask.layers import SwapAlign2Nat
 

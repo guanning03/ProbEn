@@ -82,7 +82,7 @@ for m in [
     sys.modules[m] = mock.Mock(name=m)
 sys.modules["cv2"].__version__ = "3.4"
 
-import detectron2  # isort: skip
+import detectron1  # isort: skip
 
 
 project = "detectron2"
@@ -90,7 +90,7 @@ copyright = "2019-2020, detectron2 contributors"
 author = "detectron2 contributors"
 
 # The short X.Y version
-version = detectron2.__version__
+version = detectron1.__version__
 # The full version, including alpha/beta/rc tags
 release = version
 

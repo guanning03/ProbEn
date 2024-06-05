@@ -21,12 +21,12 @@ import os
 from collections import OrderedDict
 import torch
 
-import detectron2.utils.comm as comm
-from detectron2.checkpoint import DetectionCheckpointer
-from detectron2.config import get_cfg
-from detectron2.data import MetadataCatalog
-from detectron2.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch
-from detectron2.evaluation import (
+import detectron1.utils.comm as comm
+from detectron1.checkpoint import DetectionCheckpointer
+from detectron1.config import get_cfg
+from detectron1.data import MetadataCatalog
+from detectron1.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch
+from detectron1.evaluation import (
     CityscapesEvaluator,
     COCOEvaluator,
     COCOPanopticEvaluator,
@@ -36,7 +36,7 @@ from detectron2.evaluation import (
     SemSegEvaluator,
     verify_results,
 )
-from detectron2.modeling import GeneralizedRCNNWithTTA
+from detectron1.modeling import GeneralizedRCNNWithTTA
 
 
 class Trainer(DefaultTrainer):

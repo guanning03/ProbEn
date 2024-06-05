@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-from detectron2.modeling.test_time_augmentation import GeneralizedRCNNWithTTA
+from detectron1.modeling.test_time_augmentation import GeneralizedRCNNWithTTA
 
 
 class DensePoseGeneralizedRCNNWithTTA(GeneralizedRCNNWithTTA):

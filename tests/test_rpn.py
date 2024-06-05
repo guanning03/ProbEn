@@ -3,12 +3,12 @@ import logging
 import unittest
 import torch
 
-from detectron2.config import get_cfg
-from detectron2.modeling.backbone import build_backbone
-from detectron2.modeling.proposal_generator.build import build_proposal_generator
-from detectron2.modeling.proposal_generator.rpn_outputs import find_top_rpn_proposals
-from detectron2.structures import Boxes, ImageList, Instances, RotatedBoxes
-from detectron2.utils.events import EventStorage
+from detectron1.config import get_cfg
+from detectron1.modeling.backbone import build_backbone
+from detectron1.modeling.proposal_generator.build import build_proposal_generator
+from detectron1.modeling.proposal_generator.rpn_outputs import find_top_rpn_proposals
+from detectron1.structures import Boxes, ImageList, Instances, RotatedBoxes
+from detectron1.utils.events import EventStorage
 
 logger = logging.getLogger(__name__)
 

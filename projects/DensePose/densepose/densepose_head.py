@@ -7,10 +7,10 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from detectron2.config import CfgNode
-from detectron2.layers import Conv2d, ConvTranspose2d, interpolate
-from detectron2.structures.boxes import matched_boxlist_iou
-from detectron2.utils.registry import Registry
+from detectron1.config import CfgNode
+from detectron1.layers import Conv2d, ConvTranspose2d, interpolate
+from detectron1.structures.boxes import matched_boxlist_iou
+from detectron1.utils.registry import Registry
 
 from .structures import DensePoseOutput
 

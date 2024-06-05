@@ -3,7 +3,8 @@ from detectron2.engine import DefaultPredictor
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.config import get_cfg
 from detectron2.data.datasets import register_coco_instances
-from detectron2.utils.opt import config_parser
+import argparse
+# from detectron2.utils.opt import config_parser
 from tqdm import tqdm
 from os import listdir
 from os.path import isfile, join
@@ -11,32 +12,38 @@ import numpy as np
 import cv2
 import os
 import json
+import pdb
 import torch
 
 
 def save_predictions(args):
     # Dataset information
-    dataset_name = args.dataset_name
-    val_folder = args.dataset_path
-    val_json_path = args.dataset_path + '/FLIR_thermal_RGBT_pairs_val.json'
+    # dataset_name = args.dataset_name
+    # val_folder = args.dataset_path
+    # val_json_path = args.dataset_path + '/FLIR_thermal_RGBT_pairs_val.json'
     # Test on validation set
-    register_coco_instances(dataset_name, {}, val_json_path, val_folder)
-    FLIR_metadata_test = MetadataCatalog.get(dataset_name)
-    dataset_dicts_test = DatasetCatalog.get(dataset_name)
+    # register_coco_instances(dataset_name, {}, val_json_path, val_folder)
+    # FLIR_metadata_test = MetadataCatalog.get(dataset_name)
+    # dataset_dicts_test = DatasetCatalog.get(dataset_name)
     
-    RGB_path = val_folder + '/RGB/'
-    t_path = val_folder + '/thermal_8_bit/'
+    RGB_path = args.rgb_path
+    t_path = args.thermal_path
+    rgb_file_list = sorted(os.listdir(RGB_path))
+    t_file_list = sorted(os.listdir(t_path))
+    print(f'First files: {rgb_file_list[0]} {t_file_list[0]}')
+    assert len(rgb_file_list) == len(t_file_list), "The number of RGB and thermal images should be the same!"
+    
     method = args.fusion_method
     print('==========================')
     print('model:', method)
     print('==========================')
     # Build image id dictionary
     
-    data = json.load(open(val_json_path, 'r'))
-    name_to_id_dict = {}
-    for i in range(len(data['images'])):
-        file_name = data['images'][i]['file_name'].split('/')[1].split('.')[0]
-        name_to_id_dict[file_name] = data['images'][i]['id']
+    # data = json.load(open(val_json_path, 'r'))
+    # name_to_id_dict = {}
+    # for i in range(len(data['images'])):
+    #     file_name = data['images'][i]['file_name'].split('/')[1].split('.')[0]
+    #     name_to_id_dict[file_name] = data['images'][i]['id']
 
     # File names
     files_names = [f for f in listdir(RGB_path) if isfile(join(RGB_path, f))]
@@ -90,10 +97,9 @@ def save_predictions(args):
     img_id_dict = []
     var_dict = []
 
-    for i in tqdm(range(len(data['images']))):
-        file_name = data['images'][i]['file_name'].split('/')[1].split('.')[0]
-        RGB_file = RGB_path + file_name + '.jpg'
-        thermal_file = t_path + file_name+'.jpeg'
+    for i in tqdm(range(len(rgb_file_list))):
+        RGB_file = os.path.join(RGB_path, rgb_file_list[i])
+        thermal_file = os.path.join(t_path, t_file_list[i])
         input_file = None
         if method == 'RGB':
             input_file = RGB_file
@@ -160,14 +166,14 @@ def save_predictions(args):
         classes_dict.append(out_classes)
         class_logits_dict.append(out_logits)
         prob_dict.append(out_probs)
-        img_id_dict.append(name_to_id_dict[file_name])
+        # img_id_dict.append(name_to_id_dict[file_name])
         var_dict.append(out_vars)
         
     out_dicts['image'] = image_dict
     out_dicts['boxes'] = boxes_dict
     out_dicts['scores'] = scores_dict
     out_dicts['classes'] = classes_dict
-    out_dicts['image_id'] = img_id_dict
+    # out_dicts['image_id'] = img_id_dict
     out_dicts['class_logits'] = class_logits_dict
     out_dicts['probs'] = prob_dict
     out_dicts['vars'] = var_dict
@@ -177,5 +183,11 @@ def save_predictions(args):
 
 
 if __name__ == '__main__':
-    args = config_parser()
+    parser = argparse.ArgumentParser(description = "prediction")
+    parser.add_argument("--rgb_path", type = str, required = True)
+    parser.add_argument("--thermal_path", type = str, required = True)
+    parser.add_argument("--fusion_method", type = str, required = True)
+    parser.add_argument("--model_path", type = str, required = True)
+    parser.add_argument("--outfolder", type = str, required = True)
+    args = parser.parse_args()    
     save_predictions(args)

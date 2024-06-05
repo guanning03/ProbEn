@@ -10,12 +10,12 @@ import sys
 from typing import Any, ClassVar, Dict, List
 import torch
 
-from detectron2.config import get_cfg
-from detectron2.data.detection_utils import read_image
-from detectron2.engine.defaults import DefaultPredictor
-from detectron2.structures.boxes import BoxMode
-from detectron2.structures.instances import Instances
-from detectron2.utils.logger import setup_logger
+from detectron1.config import get_cfg
+from detectron1.data.detection_utils import read_image
+from detectron1.engine.defaults import DefaultPredictor
+from detectron1.structures.boxes import BoxMode
+from detectron1.structures.instances import Instances
+from detectron1.utils.logger import setup_logger
 
 from densepose import add_densepose_config
 from densepose.utils.logger import verbosity_to_level

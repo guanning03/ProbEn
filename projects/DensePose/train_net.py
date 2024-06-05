@@ -13,14 +13,14 @@ import logging
 import os
 from collections import OrderedDict
 
-import detectron2.utils.comm as comm
-from detectron2.checkpoint import DetectionCheckpointer
-from detectron2.config import CfgNode, get_cfg
-from detectron2.data import build_detection_test_loader, build_detection_train_loader
-from detectron2.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch
-from detectron2.evaluation import COCOEvaluator, DatasetEvaluators, verify_results
-from detectron2.modeling import DatasetMapperTTA
-from detectron2.utils.logger import setup_logger
+import detectron1.utils.comm as comm
+from detectron1.checkpoint import DetectionCheckpointer
+from detectron1.config import CfgNode, get_cfg
+from detectron1.data import build_detection_test_loader, build_detection_train_loader
+from detectron1.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch
+from detectron1.evaluation import COCOEvaluator, DatasetEvaluators, verify_results
+from detectron1.modeling import DatasetMapperTTA
+from detectron1.utils.logger import setup_logger
 
 from densepose import (
     DatasetMapper,

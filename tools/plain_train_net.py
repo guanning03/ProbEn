@@ -25,16 +25,16 @@ from collections import OrderedDict
 import torch
 from torch.nn.parallel import DistributedDataParallel
 
-import detectron2.utils.comm as comm
-from detectron2.checkpoint import DetectionCheckpointer, PeriodicCheckpointer
-from detectron2.config import get_cfg
-from detectron2.data import (
+import detectron1.utils.comm as comm
+from detectron1.checkpoint import DetectionCheckpointer, PeriodicCheckpointer
+from detectron1.config import get_cfg
+from detectron1.data import (
     MetadataCatalog,
     build_detection_test_loader,
     build_detection_train_loader,
 )
-from detectron2.engine import default_argument_parser, default_setup, launch
-from detectron2.evaluation import (
+from detectron1.engine import default_argument_parser, default_setup, launch
+from detectron1.evaluation import (
     CityscapesEvaluator,
     COCOEvaluator,
     COCOPanopticEvaluator,
@@ -45,9 +45,9 @@ from detectron2.evaluation import (
     inference_on_dataset,
     print_csv_format,
 )
-from detectron2.modeling import build_model
-from detectron2.solver import build_lr_scheduler, build_optimizer
-from detectron2.utils.events import (
+from detectron1.modeling import build_model
+from detectron1.solver import build_lr_scheduler, build_optimizer
+from detectron1.utils.events import (
     CommonMetricPrinter,
     EventStorage,
     JSONWriter,

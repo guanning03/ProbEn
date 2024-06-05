@@ -9,11 +9,11 @@ This script is a simplified version of the training script in detectron2/tools.
 
 import os
 
-import detectron2.utils.comm as comm
-from detectron2.checkpoint import DetectionCheckpointer
-from detectron2.config import get_cfg
-from detectron2.engine import DefaultTrainer, default_argument_parser, default_setup, launch
-from detectron2.evaluation import COCOEvaluator, verify_results
+import detectron1.utils.comm as comm
+from detectron1.checkpoint import DetectionCheckpointer
+from detectron1.config import get_cfg
+from detectron1.engine import DefaultTrainer, default_argument_parser, default_setup, launch
+from detectron1.evaluation import COCOEvaluator, verify_results
 
 from tensormask import add_tensormask_config
 

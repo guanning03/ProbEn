@@ -1,13 +1,13 @@
 from torch.nn import functional as F
 from torchvision.ops import boxes as box_ops
 from torchvision.ops import nms
-from detectron2.config import get_cfg
-from detectron2.data import DatasetCatalog, MetadataCatalog
-from detectron2.data.datasets import register_coco_instances
-from detectron2.structures import Instances, Boxes
-from detectron2.evaluation import FLIREvaluator
-from detectron2.layers.nms import batched_nms
-from detectron2.utils.opt import config_parser
+from detectron1.config import get_cfg
+from detectron1.data import DatasetCatalog, MetadataCatalog
+from detectron1.data.datasets import register_coco_instances
+from detectron1.structures import Instances, Boxes
+from detectron1.evaluation import FLIREvaluator
+from detectron1.layers.nms import batched_nms
+from detectron1.utils.opt import config_parser
 from os.path import isfile, join
 import os
 import json

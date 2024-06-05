@@ -1,8 +1,8 @@
 # import some common detectron2 utilities
-from detectron2.engine import DefaultPredictor
-from detectron2.config import get_cfg
-from detectron2.utils.visualizer import Visualizer
-from detectron2.data import MetadataCatalog
+from detectron1.engine import DefaultPredictor
+from detectron1.config import get_cfg
+from detectron1.utils.visualizer import Visualizer
+from detectron1.data import MetadataCatalog
 from os import listdir
 from os.path import isfile, join
 import numpy as np
