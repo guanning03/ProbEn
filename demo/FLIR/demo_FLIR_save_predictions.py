@@ -51,7 +51,7 @@ def save_predictions(args):
 
     # Make folder if not exists
     if not os.path.exists(out_folder):
-        os.mkdir(out_folder)
+        os.makedirs(out_folder)
 
     cfg = get_cfg()
     cfg.merge_from_file("./configs/COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")

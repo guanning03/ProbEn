@@ -1,10 +1,10 @@
 # import some common detectron2 utilities
-from detectron1.engine import DefaultPredictor, DefaultTrainer
-from detectron1.config import get_cfg
-from detectron1.data import DatasetCatalog, MetadataCatalog
-from detectron1.data.datasets import register_coco_instances
-from detectron1.evaluation import FLIREvaluator, inference_on_dataset
-from detectron1.data import build_detection_test_loader
+from detectron2.engine import DefaultPredictor, DefaultTrainer
+from detectron2.config import get_cfg
+from detectron2.data import DatasetCatalog, MetadataCatalog
+from detectron2.data.datasets import register_coco_instances
+from detectron2.evaluation import FLIREvaluator, inference_on_dataset
+from detectron2.data import build_detection_test_loader
 import os
 import torch
 
