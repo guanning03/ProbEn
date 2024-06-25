@@ -2,8 +2,8 @@
 import logging
 import unittest
 
-from detectron1 import model_zoo
-from detectron1.modeling import FPN, GeneralizedRCNN
+from detectron2 import model_zoo
+from detectron2.modeling import FPN, GeneralizedRCNN
 
 logger = logging.getLogger(__name__)
 

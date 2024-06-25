@@ -255,7 +255,7 @@ class FastRCNNOutputs(object):
             fg_gt_classes = self.gt_classes[fg_inds]
             # pred_proposal_deltas for class k are located in columns [b * k : b * k + b],
             # where b is the dimension of box representation (4 or 5)
-            # Note that compared to Detectron1,
+            # Note that compared to detectron2,
             # we do not perform bounding box regression for background classes.
             gt_class_cols = box_dim * fg_gt_classes[:, None] + torch.arange(box_dim, device=device)        
         criterion = nn.GaussianNLLLoss()        
@@ -318,7 +318,7 @@ class FastRCNNOutputs(object):
             fg_gt_classes = self.gt_classes[fg_inds]
             # pred_proposal_deltas for class k are located in columns [b * k : b * k + b],
             # where b is the dimension of box representation (4 or 5)
-            # Note that compared to Detectron1,
+            # Note that compared to detectron2,
             # we do not perform bounding box regression for background classes.
             gt_class_cols = box_dim * fg_gt_classes[:, None] + torch.arange(box_dim, device=device)
 

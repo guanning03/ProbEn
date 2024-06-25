@@ -5,9 +5,9 @@ import copy
 import torch
 from fvcore.common.file_io import PathManager
 
-from detectron1.data import MetadataCatalog
-from detectron1.data import detection_utils as utils
-from detectron1.data import transforms as T
+from detectron2.data import MetadataCatalog
+from detectron2.data import detection_utils as utils
+from detectron2.data import transforms as T
 
 from .structures import DensePoseDataRelative, DensePoseList, DensePoseTransformData
 

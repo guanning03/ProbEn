@@ -128,7 +128,7 @@ def find_top_rrpn_proposals(
             boxes, scores_per_img, lvl = (boxes[keep], scores_per_img[keep], level_ids[keep])
 
         keep = batched_nms_rotated(boxes.tensor, scores_per_img, lvl, nms_thresh)
-        # In Detectron1, there was different behavior during training vs. testing.
+        # In detectron2, there was different behavior during training vs. testing.
         # (https://github.com/facebookresearch/Detectron/issues/459)
         # During training, topk is over the proposals from *all* images in the training batch.
         # During testing, it is over the proposals for each image separately.

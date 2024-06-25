@@ -73,7 +73,7 @@ Details for each implementation:
 
 * __Detectron2__:
   ```
-  python tools/train_net.py  --config-file configs/Detectron1-Comparisons/mask_rcnn_R_50_FPN_noaug_1x.yaml --num-gpus 8
+  python tools/train_net.py  --config-file configs/detectron2-Comparisons/mask_rcnn_R_50_FPN_noaug_1x.yaml --num-gpus 8
   ```
 
 * __maskrcnn-benchmark__: use commit `0ce8f6f` with `sed -i ‘s/torch.uint8/torch.bool/g’ **/*.py` to make it compatible with latest PyTorch.

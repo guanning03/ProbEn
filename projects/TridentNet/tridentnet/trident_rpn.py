@@ -1,9 +1,9 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 import torch
 
-from detectron1.modeling import PROPOSAL_GENERATOR_REGISTRY
-from detectron1.modeling.proposal_generator.rpn import RPN
-from detectron1.structures import ImageList
+from detectron2.modeling import PROPOSAL_GENERATOR_REGISTRY
+from detectron2.modeling.proposal_generator.rpn import RPN
+from detectron2.structures import ImageList
 
 
 @PROPOSAL_GENERATOR_REGISTRY.register()

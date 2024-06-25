@@ -5,7 +5,7 @@ import cv2
 import torch
 from fvcore.common.benchmark import benchmark
 
-from detectron1.layers.roi_align import ROIAlign
+from detectron2.layers.roi_align import ROIAlign
 
 
 class ROIAlignTest(unittest.TestCase):
@@ -112,7 +112,7 @@ class ROIAlignTest(unittest.TestCase):
 
 
 def benchmark_roi_align():
-    from detectron1 import _C
+    from detectron2 import _C
 
     def random_boxes(mean_box, stdev, N, maxsize):
         ret = torch.rand(N, 4) * stdev + torch.tensor(mean_box, dtype=torch.float)

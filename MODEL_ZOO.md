@@ -31,7 +31,7 @@ In addition to these official baseline models, you can find more models in [proj
   For example, our default training data augmentation uses scale jittering in addition to horizontal flipping.
 
   To make fair comparisons with Detectron's settings, see
-  [Detectron1-Comparisons](configs/Detectron1-Comparisons/) for accuracy comparison,
+  [detectron2-Comparisons](configs/detectron2-Comparisons/) for accuracy comparison,
   and [benchmarks](https://detectron2.readthedocs.io/notes/benchmarks.html)
   for speed comparison.
 * For Faster/Mask R-CNN, we provide baselines based on __3 different backbone combinations__:

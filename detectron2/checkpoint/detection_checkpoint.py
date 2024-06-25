@@ -32,7 +32,7 @@ class DetectionCheckpointer(Checkpointer):
                 self.logger.info("Reading a file from '{}'".format(data["__author__"]))
                 return data
             else:
-                # assume file is from Caffe2 / Detectron1 model zoo
+                # assume file is from Caffe2 / detectron2 model zoo
                 if "blobs" in data:
                     # Detection models have "blobs", but ImageNet models don't
                     data = data["blobs"]

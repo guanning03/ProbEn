@@ -5,8 +5,8 @@ import cv2
 import torch
 from torch.autograd import Variable, gradcheck
 
-from detectron1.layers.roi_align import ROIAlign
-from detectron1.layers.roi_align_rotated import ROIAlignRotated
+from detectron2.layers.roi_align import ROIAlign
+from detectron2.layers.roi_align_rotated import ROIAlignRotated
 
 logger = logging.getLogger(__name__)
 

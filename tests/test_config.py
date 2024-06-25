@@ -7,8 +7,8 @@ import tempfile
 import unittest
 import torch
 
-from detectron1.config import configurable, downgrade_config, get_cfg, upgrade_config
-from detectron1.layers import ShapeSpec
+from detectron2.config import configurable, downgrade_config, get_cfg, upgrade_config
+from detectron2.layers import ShapeSpec
 
 _V0_CFG = """
 MODEL:

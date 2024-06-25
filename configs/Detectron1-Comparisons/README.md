@@ -15,7 +15,7 @@ In this directory, we provide a few configs that mimic Detectron's behavior as c
 This provides a fair comparison of accuracy and speed against Detectron.
 
 <!--
-./gen_html_table.py --config 'Detectron1-Comparisons/*.yaml' --name "Faster R-CNN" "Keypoint R-CNN" "Mask R-CNN" --fields lr_sched train_speed inference_speed mem box_AP mask_AP keypoint_AP --base-dir ../../../configs/Detectron1-Comparisons
+./gen_html_table.py --config 'detectron2-Comparisons/*.yaml' --name "Faster R-CNN" "Keypoint R-CNN" "Mask R-CNN" --fields lr_sched train_speed inference_speed mem box_AP mask_AP keypoint_AP --base-dir ../../../configs/detectron2-Comparisons
 -->
 
 
@@ -43,7 +43,7 @@ This provides a fair comparison of accuracy and speed against Detectron.
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">137781054</td>
-<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/faster_rcnn_R_50_FPN_noaug_1x/137781054/model_final_7ab50c.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/faster_rcnn_R_50_FPN_noaug_1x/137781054/metrics.json">metrics</a></td>
+<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/faster_rcnn_R_50_FPN_noaug_1x/137781054/model_final_7ab50c.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/faster_rcnn_R_50_FPN_noaug_1x/137781054/metrics.json">metrics</a></td>
 </tr>
 <!-- ROW: keypoint_rcnn_R_50_FPN_1x -->
  <tr><td align="left"><a href="keypoint_rcnn_R_50_FPN_1x.yaml">Keypoint R-CNN</a></td>
@@ -55,7 +55,7 @@ This provides a fair comparison of accuracy and speed against Detectron.
 <td align="center"></td>
 <td align="center">64.2</td>
 <td align="center">137781195</td>
-<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/keypoint_rcnn_R_50_FPN_1x/137781195/model_final_cce136.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/keypoint_rcnn_R_50_FPN_1x/137781195/metrics.json">metrics</a></td>
+<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/keypoint_rcnn_R_50_FPN_1x/137781195/model_final_cce136.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/keypoint_rcnn_R_50_FPN_1x/137781195/metrics.json">metrics</a></td>
 </tr>
 <!-- ROW: mask_rcnn_R_50_FPN_noaug_1x -->
  <tr><td align="left"><a href="mask_rcnn_R_50_FPN_noaug_1x.yaml">Mask R-CNN</a></td>
@@ -67,7 +67,7 @@ This provides a fair comparison of accuracy and speed against Detectron.
 <td align="center">34.9</td>
 <td align="center"></td>
 <td align="center">137781281</td>
-<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/mask_rcnn_R_50_FPN_noaug_1x/137781281/model_final_62ca52.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/Detectron1-Comparisons/mask_rcnn_R_50_FPN_noaug_1x/137781281/metrics.json">metrics</a></td>
+<td align="center"><a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/mask_rcnn_R_50_FPN_noaug_1x/137781281/model_final_62ca52.pkl">model</a>&nbsp;|&nbsp;<a href="https://dl.fbaipublicfiles.com/detectron2/detectron2-Comparisons/mask_rcnn_R_50_FPN_noaug_1x/137781281/metrics.json">metrics</a></td>
 </tr>
 </tbody></table>
 

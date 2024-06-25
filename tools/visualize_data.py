@@ -8,12 +8,12 @@ import cv2
 import tqdm
 from PIL import Image
 
-from detectron1.config import get_cfg
-from detectron1.data import DatasetCatalog, MetadataCatalog, build_detection_train_loader
-from detectron1.data import detection_utils as utils
-from detectron1.data.build import filter_images_with_few_keypoints
-from detectron1.utils.logger import setup_logger
-from detectron1.utils.visualizer import Visualizer
+from detectron2.config import get_cfg
+from detectron2.data import DatasetCatalog, MetadataCatalog, build_detection_train_loader
+from detectron2.data import detection_utils as utils
+from detectron2.data.build import filter_images_with_few_keypoints
+from detectron2.utils.logger import setup_logger
+from detectron2.utils.visualizer import Visualizer
 
 
 def setup(args):

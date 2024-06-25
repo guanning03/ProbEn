@@ -36,7 +36,7 @@ _C.MODEL.WEIGHTS = ""
 # To train on images of different number of channels, just set different mean & std.
 # Default values are the mean pixel value from ImageNet: [103.53, 116.28, 123.675]
 _C.MODEL.PIXEL_MEAN = [103.530, 116.280, 123.675]
-# When using pre-trained models in Detectron1 or any MSRA models,
+# When using pre-trained models in detectron2 or any MSRA models,
 # std has been absorbed into its conv1 weights, so the std needs to be set 1.
 # Otherwise, you can use [57.375, 57.120, 58.395] (ImageNet std)
 _C.MODEL.PIXEL_STD = [1.0, 1.0, 1.0]
@@ -227,8 +227,8 @@ _C.MODEL.RPN.PRE_NMS_TOPK_TEST = 6000
 # Number of top scoring RPN proposals to keep after applying NMS
 # When FPN is used, this limit is applied per level and then again to the union
 # of proposals from all levels
-# NOTE: When FPN is used, the meaning of this config is different from Detectron1.
-# It means per-batch topk in Detectron1, but per-image topk here.
+# NOTE: When FPN is used, the meaning of this config is different from detectron2.
+# It means per-batch topk in detectron2, but per-image topk here.
 # See "modeling/rpn/rpn_outputs.py" for details.
 _C.MODEL.RPN.POST_NMS_TOPK_TRAIN = 2000
 _C.MODEL.RPN.POST_NMS_TOPK_TEST = 1000

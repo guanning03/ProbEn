@@ -2,7 +2,7 @@
 import unittest
 from torch.utils.data.sampler import SequentialSampler
 
-from detectron1.data.samplers import GroupedBatchSampler
+from detectron2.data.samplers import GroupedBatchSampler
 
 
 class TestGroupedBatchSampler(unittest.TestCase):

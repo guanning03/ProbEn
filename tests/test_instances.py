@@ -2,7 +2,7 @@
 import unittest
 import torch
 
-from detectron1.structures import Instances
+from detectron2.structures import Instances
 
 
 class TestInstancesIndexing(unittest.TestCase):

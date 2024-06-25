@@ -134,7 +134,7 @@ def paste_masks_in_image(masks, boxes, image_shape, threshold=0.5):
     return img_masks
 
 
-# The below are the original paste function (from Detectron1) which has
+# The below are the original paste function (from detectron2) which has
 # larger quantization error.
 # It is faster on CPU, while the aligned one is faster on GPU thanks to grid_sample.
 

@@ -8,10 +8,10 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-from detectron1.layers import Conv2d, ShapeSpec, get_norm
-from detectron1.modeling import ROI_HEADS_REGISTRY, StandardROIHeads
-from detectron1.modeling.poolers import ROIPooler
-from detectron1.modeling.roi_heads import select_foreground_proposals
+from detectron2.layers import Conv2d, ShapeSpec, get_norm
+from detectron2.modeling import ROI_HEADS_REGISTRY, StandardROIHeads
+from detectron2.modeling.poolers import ROIPooler
+from detectron2.modeling.roi_heads import select_foreground_proposals
 
 from .densepose_head import (
     build_densepose_data_filter,

@@ -3,8 +3,8 @@ import logging
 import unittest
 import torch
 
-from detectron1.modeling.poolers import ROIPooler
-from detectron1.structures import Boxes, RotatedBoxes
+from detectron2.modeling.poolers import ROIPooler
+from detectron2.structures import Boxes, RotatedBoxes
 
 logger = logging.getLogger(__name__)
 

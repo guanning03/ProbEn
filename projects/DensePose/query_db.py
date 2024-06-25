@@ -9,8 +9,8 @@ from timeit import default_timer as timer
 from typing import Any, ClassVar, Dict, List
 import torch
 
-from detectron1.data.catalog import DatasetCatalog
-from detectron1.utils.logger import setup_logger
+from detectron2.data.catalog import DatasetCatalog
+from detectron2.utils.logger import setup_logger
 
 from densepose.structures import DensePoseDataRelative
 from densepose.utils.dbhelper import EntrySelector

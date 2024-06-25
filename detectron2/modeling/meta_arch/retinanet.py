@@ -106,7 +106,7 @@ class RetinaNet(nn.Module):
         self.to(self.device)
 
         """
-        In Detectron1, loss is normalized by number of foreground samples in the batch.
+        In detectron2, loss is normalized by number of foreground samples in the batch.
         When batch size is 1 per GPU, #foreground has a large variance and
         using it lead to lower performance. Here we maintain an EMA of #foreground to
         stabilize the normalizer.
